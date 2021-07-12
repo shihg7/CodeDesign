@@ -15,6 +15,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.math.BigInteger;
+import java.nio.charset.StandardCharsets;
 import java.util.*;
 
 public class ApiTest {
@@ -44,7 +45,7 @@ public class ApiTest {
 
         // 链接：1->12
         TreeNodeLink treeNodeLink_12 = new TreeNodeLink();
-        treeNodeLink_12.setNodeIdFrom(1L);
+        treeNodeLink_12.setNodeIdTo(1L);
         treeNodeLink_12.setNodeIdTo(12L);
         treeNodeLink_12.setRuleLimitType(1);
         treeNodeLink_12.setRuleLimitValue("woman");
@@ -166,12 +167,12 @@ public class ApiTest {
 
         IEngine treeEngineHandle = new TreeEngineHandle();
 
-        /**
-         * 测试数据
-         * 果实A：gender=man、age=22
-         * 果实B：gender=man、age=29
-         * 果实C：gender=woman、age=22
-         * 果实D：gender=woman、age=29
+        /*
+          测试数据
+          果实A：gender=man、age=22
+          果实B：gender=man、age=29
+          果实C：gender=woman、age=22
+          果实D：gender=woman、age=29
          */
         Map<String, String> decisionMatter = new HashMap<>();
         decisionMatter.put("gender", "man");
@@ -216,7 +217,7 @@ public class ApiTest {
             }
         }
         try {
-            s = new String(baKeyword, "UTF-8");
+            s = new String(baKeyword, StandardCharsets.UTF_8);
             new String();
         } catch (Exception e1) {
             e1.printStackTrace();
