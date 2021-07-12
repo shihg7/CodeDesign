@@ -12,5 +12,4 @@ public interface IVideoUserService {
 
     // 广告播放方式；无广告、有广告
     void advertisement();
-
 }

@@ -1,6 +1,7 @@
 package cn.bugstack.design.test;
 
 import cn.bugstack.design.VideoUserService;
+
 import org.junit.Test;
 
 /**
@@ -11,11 +12,10 @@ import org.junit.Test;
 public class ApiTest {
 
     @Test
-    public void test_serveGrade(){
+    public void test_serveGrade() {
         VideoUserService service = new VideoUserService();
         service.serveGrade("VIP用户");
         service.serveGrade("普通用户");
         service.serveGrade("访客用户");
     }
-
 }

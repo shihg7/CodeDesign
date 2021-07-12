@@ -11,12 +11,12 @@ import java.util.List;
  * 博客：https://bugstack.cn - 沉淀、分享、成长，让自己和他人都能有所收获！
  * 公众号：bugstack虫洞栈
  * Create by 小傅哥(fustack) @2020
- *
+ * <p>
  * 模拟储蓄卡功能
  */
 public class CashCard {
 
-    private Logger logger = LoggerFactory.getLogger(CashCard.class);
+    private final Logger logger = LoggerFactory.getLogger(CashCard.class);
 
     /**
      * 提现
@@ -45,6 +45,7 @@ public class CashCard {
 
     /**
      * 交易流水查询
+     *
      * @return 交易流水
      */
     public List<String> tradeFlow() {
@@ -56,5 +57,4 @@ public class CashCard {
         tradeList.add("100001,126.00");
         return tradeList;
     }
-
 }

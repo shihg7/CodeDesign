@@ -15,12 +15,12 @@ import java.util.List;
  */
 public class CreditCard extends CashCard {
 
-    private Logger logger = LoggerFactory.getLogger(CashCard.class);
+    private final Logger logger = LoggerFactory.getLogger(CashCard.class);
 
     @Override
     public String withdrawal(String orderId, BigDecimal amount) {
         // 校验
-        if (amount.compareTo(new BigDecimal(1000)) >= 0){
+        if (amount.compareTo(new BigDecimal(1000)) >= 0) {
             logger.info("贷款金额校验(限额1000元)，单号：{} 金额：{}", orderId, amount);
             return "0001";
         }
@@ -44,5 +44,4 @@ public class CreditCard extends CashCard {
     public List<String> tradeFlow() {
         return super.tradeFlow();
     }
-
 }
